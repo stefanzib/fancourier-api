@@ -2,6 +2,7 @@
 
 namespace Fancourier;
 
+use Fancourier\Request\CreateAwbRetur;
 use Fancourier\Request\RequestInterface;
 use Fancourier\Request\CreateAwb;
 use Fancourier\Request\CreateAwbExternal;
@@ -87,6 +88,16 @@ class Fancourier
      * @return \Fancourier\Response\CreateAwb
      */
     public function createAwb(CreateAwb $request)
+    {
+        return $this->send($request);
+    }
+
+
+    /**
+     * @param CreateAwbRetur $request
+     * @return \Fancourier\Response\CreateAwbRetur
+     */
+    public function createAwbRetur(CreateAwbRetur $request)
     {
         return $this->send($request);
     }

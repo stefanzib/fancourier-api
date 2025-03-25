@@ -8,7 +8,8 @@
 - <a href="#usage">Usage</a>
     - <a href="#authentication">Authentication</a>
     - <a href="#get-estimated-shipping-cost">Get estimated shipping cost</a>
-    - <a href="#create-awb">Create AWB</a>
+  - <a href="#create-awb">Create AWB</a>
+    - <a href="#create-awb">Create AWB Retur</a>
     - <a href="#create-awb-in-bulk">Create AWB in bulk</a>
     - <a href="#track-awb">Track AWB</a>
     - <a href="#track-awb-in-bulk">Track awb in bulk</a>
