@@ -81,6 +81,27 @@ class CreateCourierOrder extends AbstractRequest implements RequestInterface
 							'observations' => $this->notes,
 							]
 			];
+
+        //fan
+            $arr["sender"] = [ //obligatoriu
+                "name" => $this->name,
+                "contactPerson" => $this->contactPerson, // obligatoriu
+                "phone" => $this->phone,
+                "secondaryPhone" => $this->altPhone, // optional
+                "email" => $this->email,
+                "address" => [ //obligatoriu
+                    "county" => $this->county, // {{url}}/counties
+                    "locality" => $this->city, // {{url}}/localities
+                    "street" => $this->street, // {{url}}/streets
+                    "streetNo" => strval($this->number),
+                    "zipCode" => $this->postalCode,
+                    "building" => $this->building,
+                    "entrance" => $this->entrance,
+                    "floor" => $this->floor,
+                    "apartment" => $this->apartment,
+                    //"country" => "Romania" // optional
+                ]
+            ];
 			
 			if (strtolower($this->orderType) != 'standard')
 				{
